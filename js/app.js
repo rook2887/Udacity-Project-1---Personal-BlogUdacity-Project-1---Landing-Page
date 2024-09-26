@@ -76,7 +76,7 @@ sections.forEach((section) => {
 });
 
 // Check if DOM element is visible in current viewport
-// (return DOMRec Object that represents an element's precise location in relation to its viewport, and checks if an element is within the visible area of the browser window. The next step is to target the monitored elements' class, and check visibility of each item based on the DOMRec function then log a msg based on position calculated by previous function) + adds activate state to nav bar items as well.
+// (return DOMRec Object that represents an element's precise location in relation to its viewport, and checks if an element is within the visible area of the browser window. The next step is to target the monitored elements' class as well as navbar links, and check visibility of each item based on the DOMRec function then log a msg based on position calculated by previous function and add CSS styles to active states)
 
 function isElementInViewport(element) {
   const rect = element.getBoundingClientRect();
@@ -89,10 +89,9 @@ function isElementInViewport(element) {
   );
 }
 
-const elementsToCheck = document.querySelectorAll(".your-active-class"); // class I want to monitor
-
 function checkVisibility() {
   sections.forEach((section) => {
+    const elementsToCheck = document.querySelectorAll(".your-active-class"); // class I want to monitor
     const link = document.querySelector(`a[href="#${section.id}"]`); // Find the corresponding nav link
 
     if (isElementInViewport(section)) {
