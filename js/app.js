@@ -107,3 +107,18 @@ function checkVisibility() {
 }
 
 window.addEventListener("scroll", checkVisibility);
+
+// Navbar timeout
+
+let isScrolling;
+const navbar = document.querySelector(".page__header");
+
+window.addEventListener("scroll", () => {
+  navbar.classList.remove("hidden");
+
+  clearTimeout(isScrolling);
+
+  isScrolling = setTimeout(() => {
+    navbar.classList.add("hidden");
+  }, 2000);
+});
