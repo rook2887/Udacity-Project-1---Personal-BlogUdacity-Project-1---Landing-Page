@@ -59,4 +59,20 @@
 
 // Set sections as active
 
+// Interactive navbar
+const sections = document.querySelectorAll('section');
+
+const navList = document.getElementById('navbar__list');
+
+sections.forEach(section => {
+    const navItem = document.createElement('li');
+    const link = document.createElement('a');
+
+    link.textContent = section.getAttribute('data-nav')
+    link.href = `#${section.id}`
+    link.classList.add('menu__link');
+
+    navItem.appendChild(link);
+    navList.appendChild(navItem);
+});
 
