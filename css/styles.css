@@ -208,6 +208,10 @@ section.your-active-class .landing__container::after {
     animation: rotate 5s linear 0s infinite forwards reverse;
 }
 
+.your-active-class.active {
+     background-color: yellow;
+        }
+
 /* Section Active Styles Keyframe Animations */
 @keyframes rotate {
 	from {
@@ -222,7 +226,3 @@ section.your-active-class .landing__container::after {
 	}
 }
 
-.your-active-class.active {
-    background-color: yellow;
-    /* Highlight active section */
-}
