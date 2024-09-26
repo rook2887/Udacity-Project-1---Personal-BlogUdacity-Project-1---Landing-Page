@@ -209,8 +209,14 @@ section.your-active-class .landing__container::after {
 }
 
 .your-active-class.active {
-     background-color: yellow;
+     background-color: rgb(65, 4, 145);
         }
+
+        .menu__link.active {
+    background-color: rgb(65, 4, 145);
+    color: black;
+}
+
 
 /* Section Active Styles Keyframe Animations */
 @keyframes rotate {

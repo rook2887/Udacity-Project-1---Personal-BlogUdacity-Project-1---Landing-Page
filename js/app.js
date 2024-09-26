@@ -68,7 +68,7 @@ sections.forEach((section) => {
   link.classList.add("menu__link");
   link.addEventListener("click", (event) => {
     event.preventDefault();
-    section.scrollIntoView({ behavior: "smooth" });
+    section.scrollIntoView({ behavior: "smooth", block: "center" });
   });
 
   navItem.appendChild(link);
@@ -76,7 +76,8 @@ sections.forEach((section) => {
 });
 
 // Check if DOM element is visible in current viewport
-// (return DOMRec Object that represents an element's location in relation to its viewport, and checks if an element is within the visible area of the browser window. The next step is to target the monitored elements' class, and check visibility of each item based on the DOMRec function then log a msg based on position calculated by previous function)
+// (return DOMRec Object that represents an element's precise location in relation to its viewport, and checks if an element is within the visible area of the browser window. The next step is to target the monitored elements' class, and check visibility of each item based on the DOMRec function then log a msg based on position calculated by previous function) + adds activate state to nav bar items as well.
+
 function isElementInViewport(element) {
   const rect = element.getBoundingClientRect();
   return (
@@ -91,13 +92,17 @@ function isElementInViewport(element) {
 const elementsToCheck = document.querySelectorAll(".your-active-class"); // class I want to monitor
 
 function checkVisibility() {
-  elementsToCheck.forEach((element) => {
-    if (isElementInViewport(element)) {
-      console.log(`Element ${element.id} is visible in viewport`);
-      element.classList.add("active");
+  sections.forEach((section) => {
+    const link = document.querySelector(`a[href="#${section.id}"]`); // Find the corresponding nav link
+
+    if (isElementInViewport(section)) {
+      section.classList.add("active");
+      link.classList.add("active");
+      console.log(`Section ${section.id} and its nav link are active`);
     } else {
-      console.log(`Element ${element.id} is not visible in viewport`);
-      element.classList.remove("active");
+      section.classList.remove("active");
+      link.classList.remove("active");
+      console.log(`Section ${section.id} and its nav link are inactive`);
     }
   });
 }
