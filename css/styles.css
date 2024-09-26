@@ -96,6 +96,25 @@ section {
     transition: ease 0.3s all;
 }
 
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    margin-left: -50px;
+    background-color: #333;
+    color: rgb(109, 153, 240);
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    transition: opacity 0.3s ease;
+}
+
+.scroll-to-top:hover {
+    background-color: #555;
+}
+
 /* Header Styles */
 .page__header {
     background: #fff;
