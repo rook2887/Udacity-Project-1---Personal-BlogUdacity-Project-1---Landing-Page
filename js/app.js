@@ -161,3 +161,22 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+function toggleMenu() {
+  const navbarMenu = document.querySelector(".navbar__menu");
+  navbarMenu.classList.toggle("active");
+}
+
+// Responsive Ham menu
+const hamburger = document.querySelector(".hamburger");
+const navbarList = document.getElementById("navbar__list");
+
+hamburger.addEventListener("click", () => {
+  navbarList.classList.toggle("active");
+});
+
+document.addEventListener("click", (event) => {
+  if (!hamburger.contains(event.target) && !navbarList.contains(event.target)) {
+    navbarList.classList.remove("active");
+  }
+});
