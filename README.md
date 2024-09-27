@@ -17,7 +17,7 @@ This project is a dynamic landing page that showcases DOM manipulation technique
 To run this project locally, clone the repository and open index.html in your preferred web browser.
 
 ```bash
-   git clone https://github.com/your-username/DOMManipulationProject.git
+   git clone https://github.com/rook2887/Udacity-Project-2---Landing-Page.git
    open index.html
 ```
 
@@ -26,3 +26,5 @@ To run this project locally, clone the repository and open index.html in your pr
 - CSS3
 - JavaScript
 - Google Fonts
+- BEM (Block Element Modifier) and SMACSS (Scalable and Modular Architecture for CSS) for structuring CSS
+    
