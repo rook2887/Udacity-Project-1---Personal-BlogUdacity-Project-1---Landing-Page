@@ -91,7 +91,6 @@ function isElementInViewport(element) {
 
 function checkVisibility() {
   sections.forEach((section) => {
-    const elementsToCheck = document.querySelectorAll(".your-active-class"); // class I want to monitor
     const link = document.querySelector(`a[href="#${section.id}"]`); // Find the corresponding nav link
 
     if (isElementInViewport(section)) {
@@ -142,5 +141,23 @@ scrollToTopBtn.addEventListener("click", () => {
   window.scrollTo({
     top: 0,
     behavior: "smooth",
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const collapsibleTrigger = document.querySelectorAll(".collapsible");
+
+  collapsibleTrigger.forEach((header) => {
+    header.addEventListener("click", () => {
+      const content = header.nextElementSibling;
+
+      content.classList.toggle("active");
+
+      if (content.classList.contains("active")) {
+        content.style.maxHeight = content.scrollHeight + "px";
+      } else {
+        content.style.maxHeight = 0;
+      }
+    });
   });
 });

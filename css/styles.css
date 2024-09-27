@@ -239,10 +239,28 @@ section.your-active-class .landing__container::after {
      background-color: rgb(65, 4, 145);
         }
 
-        .menu__link.active {
+
+
+.menu__link.active {
     background-color: rgb(65, 4, 145);
     color: black;
 }
+
+.collapsible {
+    cursor: pointer;
+    padding: 15px;
+    background-color: #cb0ba2;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    display: inline-block;}
+
+.collapsible-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
 
 
 /* Section Active Styles Keyframe Animations */
@@ -258,4 +276,5 @@ section.your-active-class .landing__container::after {
 		           rotate(-360deg);
 	}
 }
+
 
