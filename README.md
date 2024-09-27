@@ -22,7 +22,7 @@ To run this project locally, clone the repository and open index.html in your pr
 ```
 
 ## Technologies Used
-HTML5
-CSS3
-JavaScript
-Google Fonts
+- HTML5
+- CSS3
+- JavaScript
+- Google Fonts
