@@ -2,6 +2,8 @@
 
 This project is a dynamic landing page that showcases DOM manipulation techniques using HTML, CSS, and JavaScript. It features a responsive navigation menu, collapsible sections, and smooth scrolling effects.
 
+Check website at: https://rook2887.github.io/Udacity-Project-2---Landing-Page/
+
 ## Features
 
 - Responsive Design: The layout adjusts seamlessly for different screen sizes.
